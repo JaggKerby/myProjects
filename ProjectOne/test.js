@@ -1,3 +1,4 @@
+"use strict"
 let user = {
   name: "Ilya",
   age: 30,
@@ -18,6 +19,8 @@ let user = {
   },
 };
 
+// пример использования методово и this 
+
 let calculator = { 
     mult() {
         return this.y * this.x
@@ -30,6 +33,9 @@ let calculator = {
         this.y = +prompt('Enter the y', 0) 
    },
 };
+
+
+// Пример проверки наличия свойств в объекте и прогон цикла по свойствам объекта.  
 
 let user = new Object();
 user.name = "John";
@@ -53,6 +59,8 @@ for (let key in salaries) {
 
 console.log(sum)
 
+// Пример использования object.assign 
+
 let user = {
     name: 'John',
     surname: 'Smith',
@@ -66,7 +74,31 @@ let admin = {
     role: 'admin',
 };
 
-let userRole = Object.assign( admin, user);
-let clone = Object.assign({}, userRole);
+let userRole = Object.assign( admin, user); // Составляем новый объект из свойств 2-х других объектов
+let clone = Object.assign({}, userRole); // Делаем клон объекта 
 console.log(userRole);
 console.log(clone);
+
+// функция конструктор для создания однотипных объектов 
+
+function addUser(name) {  
+    this.name = name;
+    this.isAdmin = true;
+    this.salary = 0;
+    this.method = function method(){
+        if (this.isAdmin == true) {
+            this.salary = 500
+        } else {
+            console.log('Not admin');
+        };
+    };
+} 
+
+let user = new addUser(prompt('Enter your name '));
+user.method(this.name);
+console.log(user);
+console.log(user.salary);
+
+
+
+
