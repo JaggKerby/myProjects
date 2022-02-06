@@ -101,12 +101,18 @@
 // console.log(user);
 // console.log(user.salary);
 
-let a = +prompt('Ente the  1st number: ');
-let b = +prompt('Enter the second number: ');
-let sum = Math.round(a+b);
-alert(sum);
+// let a = +prompt('Ente the  1st number: ');
+// let b = +prompt('Enter the second number: ');
+// let sum = Math.round(a+b);
+// alert(sum);
 
-function makeUpperCase(str) {
-    return str.toUpperCase()
-  }
+// function makeUpperCase(str) {
+//     return str.toUpperCase()
+//   }
 
+function upFirst (str){
+  return str[0].toUpperCase()+str.slice(1);
+};
+
+console.log(upFirst('anastasiya'));
+console.log(upFirst('ilya'));
