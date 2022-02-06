@@ -1,4 +1,4 @@
-// "use strict"
+"use strict"
 // let user = {
 //   name: "Ilya",
 //   age: 30,
@@ -70,7 +70,7 @@
 // };
 
 // let admin = {
-//     name: 'France',
+//     name: 'France',5
 //     role: 'admin',
 // };
 
@@ -83,19 +83,30 @@
 
 // function addUser(name) {  
 //     this.name = name;
-//     this.isAdmin = true;
+//     this.prof = prompt('Enter the proffession: ')
+//     this.rank = +prompt('Enter the rank: ');
 //     this.salary = 0;
-//     this.method = function method(){
-//         if (this.isAdmin == true) {
-//             this.salary = 500
-//         } else {
-//             console.log('Not admin');
+//     this.setSalary = function method(){
+//         if (this.rank <= 2) {
+//             this.salary = 200;
+//         } else if (this.rank >= 3 && this.rank != 10) {
+//             this.salary = 1000;
 //         };
 //     };
 // } 
 
 // let user = new addUser(prompt('Enter your name '));
-// user.method(this.name);
+
+// user.setSalary(this.name);
 // console.log(user);
 // console.log(user.salary);
+
+let a = +prompt('Ente the  1st number: ');
+let b = +prompt('Enter the second number: ');
+let sum = Math.round(a+b);
+alert(sum);
+
+function makeUpperCase(str) {
+    return str.toUpperCase()
+  }
 
