@@ -1,26 +1,17 @@
 'use strict'
+// const input = prompt('Enter the string: ');
+// const el = document.querySelector('.main_aboutme'); 
+// el.innerHTML = `<i>${input}</i>`;
 
-// let admin;
-// let name;
-// name = 'Jhon';
-// admin = name;
+const newInput = prompt('Enter a message: ');
+const messageEl = document.createElement('p');
+messageEl.innerText = newInput;
 
-// alert(admin);
+const messageBox = document.querySelector('.messeng');
+messageBox.append(messageEl); 
 
-// let officialName = prompt('Какоее официальное название JS? ');
-// if (officialName == 'ECMAScript') {
-//     alert('You are right!');
-// } else {
-//     alert('No!');
-// };
+setTimeout(hideMessage, 2000);
 
-// let x = +prompt('Enter the number: ');
-
-// if (x > 0 ) {
-//     alert('1');
-// } else if (x < 0) {
-//     alert('-1');
-// } else {
-//     alert('0');
-// };
-
+function hideMessage() {
+    messageEl.hidden = true;
+}
