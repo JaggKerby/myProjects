@@ -45,7 +45,7 @@ function clearInput() {
   const input = document.querySelector('.TextInput');
   return input.value = '';
 }
-Премение Обработчиков события для скрытия показа элемента на тсранице. 
+// Премение Обработчиков события для скрытия показа элемента на тсранице. 
 const button = document.querySelector('.textBtn');
 button.addEventListener('click', hideText);
 
@@ -72,8 +72,9 @@ function showText(){
 
 const button = document.querySelector('.sendText');
 button.addEventListener('click', buttonClick);
-button.hidden = true;
+button.hidden = true; // скрываем кнопку
 
+// Обработка клика - добавляем текст в элемент и ввызываем ф-ии вставки
 function buttonClick(){
   const text = getInputText();
   addElementToList(text);
@@ -85,19 +86,28 @@ function getInputText() {
   return input.value;
 }
 
+//В этой функции мы создаем элемент и добавлеям его в родительский
+//Далее считаем кол-во элементов и удаляем первый элемент 
 function addElementToList(text) {
   const listEl = document.createElement('p');
   listEl.innerText = text;
   const List = document.querySelector('.textarea');
   List.append(listEl);
-}
+  countElements()
+  function countElements(){
+    let countEl = document.querySelectorAll('div p').length;
+    if (countEl > 5) {
+     return countEl = document.querySelector('p').remove(0);
+    }
+  };
+};
 
 function clearInput() {
   const input = document.querySelector('.textInput');
   return input.value = '';
 }
 
-// Показываем кноку после ввода символов в поле. 
+//Показываем кноку после ввода символов в поле. 
 
 const pressKey = document.querySelector('.textInput');
 pressKey.addEventListener ('input', Button);
@@ -106,6 +116,3 @@ function Button() {
   const inputButton = document.querySelector('.sendText')
   inputButton.hidden = false;
 }
-
-const countEl = document.querySelectorAll('div p').length 
-console.log(countEl);
