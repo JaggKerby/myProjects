@@ -123,7 +123,7 @@ console.log(upFirst('ilya'));
 
 let arr = ['Some', function(){alert('Hello!')}, 3];
 
-// arr[1]();
+arr[1]();
 // alert(arr[2]);
 
 alert(arr.pop(2));

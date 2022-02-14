@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+    text-align: center;
+    font-size: 2.5em;
+}
+.btnarea {
+    display: flex;
+    justify-content: center;
+    gap: 10px 20px; 
+    margin: 20px;
+}
+button {
+    background-color: rgb(250, 234, 143);
+    font-size: 1.2em;
+}
