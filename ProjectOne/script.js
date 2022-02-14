@@ -116,3 +116,11 @@ function Button() {
   const inputButton = document.querySelector('.sendText')
   inputButton.hidden = false;
 }
+
+//Map и Set
+
+//Сейчас мы знаем о следующих сложных структурах данных:
+//Объекты для хранения именованных коллекций.
+//Массивы для хранения упорядоченных коллекций.
+
+
