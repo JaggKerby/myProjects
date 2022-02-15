@@ -34,10 +34,21 @@ function properFunc() {
 }
 
 function sentenceFunc() {
-  const getSentence = document.getElementById("text");
-  let sentenceStr = getSentence.value.replace(/^\S)/g, function (a) {
-    return a.toUpperCase();
-  });
-  return (getSentence.value = sentenceStr);
-}
+  const Sentence = document.getElementById("text"); // how are you. my friend
+  let stringToArr = Sentence.value.toLowerCase().split('. ');
+  let newArr = [];
+  function makeArr() {
+    for (let i = 0; i < stringToArr.length; i++) {
+      if (stringToArr[i] != 0){
+      const element = stringToArr[i]; //  0: how are you
+      let newStr = element[0].toUpperCase() + element.slice(1); // H + ow are you
+      newArr.push(newStr);
+      }
+
+    }
+   return newArr;
+  }
+  makeArr();
+  return Sentence.value = newArr.join('. ');
+};
 
